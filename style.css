@@ -43,6 +43,13 @@ body {
   width: 100%;
   border-bottom: 1px solid #DB5461;
   margin: 20px 0;
+  font-size: 19px;
+}
+
+@media only screen and (max-width: 767px) {
+  .divider {
+    text-align: center;
+  }
 }
 
 #msform fieldset .form-card {
