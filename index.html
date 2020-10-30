@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="vendors/jquery.mask.js"></script>
   <script src="script.js"></script>
-  <link href="fontawesome.css" rel="stylesheet">
+  <link href="vendors/fa/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -26,10 +27,18 @@
               <form id="msform">
                 <!-- progressbar -->
                 <ul id="progressbar">
-                  <li class="active" id="account"><strong>Account</strong></li>
-                  <li id="personal"><strong>Personal</strong></li>
-                  <li id="payment"><strong>Payment</strong></li>
-                  <li id="confirm"><strong>Finish</strong></li>
+                  <li class="active" id="account">
+                    <strong>Identificação e contatos</strong>
+                  </li>
+                  <li id="personal">
+                    <strong>Atuação e disponibilidade</strong>
+                  </li>
+                  <li id="payment">
+                    <strong>Certificados e referências</strong>
+                  </li>
+                  <li id="confirm">
+                    <strong>Pronto!</strong>
+                  </li>
                 </ul> <!-- fieldsets -->
                 <fieldset>
                   <div class="form-card">
@@ -38,17 +47,17 @@
                     <div class="divider">Informações da empresa</div>
                     <div class="row">
                       <div class="input-group col-12 col-md-4">
-                        <label class="required">Nome da Empresa</label>
+                        <i class="fas fa-building"></i><label class="required">Nome da Empresa</label>
                         <input type="text" placeholder="Digite o nome da sua empresa..." required>
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label class="required">Responsável</label>
+                        <i class="fas fa-user-tie"></i><label class="required">Responsável</label>
                         <input type="text" placeholder="Digite o nome do responsável..." required>
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label class="required">CNPJ</label>
+                        <i class="far fa-id-card"></i><label class="required">CNPJ</label>
                         <input type="text" id="cnpj" placeholder="Digite o CNPJ..." required>
                         <p>Verifique o campo</p>
                       </div>
@@ -56,34 +65,34 @@
                     <div class="divider">Contato</div>
                     <div class="row">
                       <div class="input-group col-12 col-md-4">
-                        <label>Telefone</label>
+                        <i class="fas fa-phone-alt"></i><label>Telefone</label>
                         <input type="text" class="phone" placeholder="Digite o telefone com o DDD...">
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label class="required">Celular</label>
+                        <i class="fas fa-mobile-alt"></i><label class="required">Celular</label>
                         <input type="text" class="phone" placeholder="Digite o celular com o DDD..." required>
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label>Whatsapp</label>
+                        <i class="fab fa-whatsapp"></i><label>Whatsapp</label>
                         <input type="text" class="phone" placeholder="Digite o Whatsapp com o DDD...">
                         <p>Verifique o campo</p>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-group col-12 col-md-4">
-                        <label class="required">E-mail</label>
+                        <i class="fas fa-envelope"></i><label class="required">E-mail</label>
                         <input type="email" class="phone" placeholder="Digite o seu e-mail..." required>
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label>E-mail 2</label>
+                        <i class="fas fa-envelope"></i><label>E-mail 2</label>
                         <input type="text" class="phone" placeholder="Digite outro e-mail...">
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label>Site</label>
+                        <img src="./assets/website.png"></i><label>Site</label>
                         <input type="text" class="phone" placeholder="Digite o endereço de seu site..">
                         <p>Verifique o campo</p>
                       </div>
@@ -91,22 +100,54 @@
                     <div class="divider">Redes Sociais</div>
                     <div class="row">
                       <div class="input-group col-12 col-md-4">
-                        <label>LinkedIn</label>
+                        <i class="fab fa-linkedin"></i><label>LinkedIn</label>
                         <input type="text" class="social" placeholder="Digite o seu LinkedIn...">
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label>Instagram</label>
+                        <i class="fab fa-instagram-square"></i></i><label>Instagram</label>
                         <input type="text" class="social" placeholder="Digite o seu Instagram...">
                         <p>Verifique o campo</p>
                       </div>
                       <div class="input-group col-12 col-md-4">
-                        <label>Facebook</label>
+                        <i class="fab fa-facebook"></i><label>Facebook</label>
                         <input type="text" class="social" placeholder="Digite o seu Facebook...">
                         <p>Verifique o campo</p>
                       </div>
                     </div>
-                  </div> <input type="button" name="next" class="next action-button" value="Next Step" />
+                    <div class="divider">Endereço</div>
+                    <div class="row">
+                      <div class="input-group col-12 col-md-8">
+                        <label class="required" >Endereço</label>
+                        <input type="text" placeholder="Ex.: Av Paulista, 1400" required>
+                        <p>Verifique o campo</p>
+                      </div>
+                      <div class="input-group col-12 col-md-4">
+                        <label class="required" >CEP</label>
+                        <input type="text" placeholder="Digite seu CEP..." required>
+                        <p>Verifique o campo</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-group col-12 col-md-5">
+                        <label class="required" >Bairro</label>
+                        <input type="text" placeholder="Digite seu bairro..." required>
+                        <p>Verifique o campo</p>
+                      </div>
+                      <div class="input-group col-12 col-md-5">
+                        <label class="required" >Cidade</label>
+                        <input type="text" placeholder="Digite sua cidade..." required>
+                        <p>Verifique o campo</p>
+                      </div>
+                      <div class="input-group col-12 col-md-2">
+                        <label class="required" >Estado</label>
+                        <input type="text" placeholder="Ex.: SP" required>
+                        <p>Verifique o campo</p>
+                      </div>
+                    </div>
+                  </div> 
+                  <button type="submit" class="next action-button">Próximo 	&#8594;</i></button>
+                  <!-- <input type="button" name="next"  value="Next Step" /> -->
                 </fieldset>
                 <fieldset>
                   <div class="form-card">

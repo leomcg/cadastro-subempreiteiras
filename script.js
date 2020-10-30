@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  //masks
+  $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
 
   var current_fs, next_fs, previous_fs; //fieldsets
   var opacity;
