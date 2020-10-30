@@ -14,6 +14,7 @@ body {
 #grad1 {
   background-color: #9C27B0;
   background-image: linear-gradient(120deg, #2C3E50, #DB5461);
+  min-height: 100vh;
 }
 
 .card {
@@ -113,18 +114,18 @@ i {
   color: #9E9E9E;
 }
 
-.input-group {
+.my-input-group {
   position: relative;
 }
 
-.input-group img {
+.my-input-group img {
   width: 23px;
   height: 23px;
   margin-right: 5px;
 }
 
 @media only screen and (max-width: 767px) {
-  .input-group img {
+  .my-input-group img {
     width: 20px;
     height: 20px;
   }
@@ -145,7 +146,7 @@ i {
   color: #2C3E50;
 }
 
-.input-group p {
+.my-input-group p {
   font-size: 10px;
   position: absolute;
   top: 10px;
@@ -154,7 +155,7 @@ i {
   display: none;
 }
 
-#msform input,
+#msform input:not([type=checkbox]),
 #msform textarea {
   padding: 10px;
   border: 1px solid #ccc;
@@ -170,7 +171,7 @@ i {
 }
 
 @media only screen and (max-width: 480px) {
-  #msform input,
+  #msform input:not([type=checkbox]),
   #msform textarea {
     margin-bottom: 11px;
   }
@@ -183,6 +184,22 @@ i {
   border: none;
   border: 2px solid #2C3E50;
   outline-width: 0;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+input[type=checkbox] ~ label {
+  margin-left: 6px;
+  margin-top: 2px;
+  font-size: 17px;
+}
+
+input[type=textarea] {
+  height: 100px;
 }
 
 #msform .action-button {
