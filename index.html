@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="vendors/jquery.mask.js"></script>
   <script src="script.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link href="vendors/fa/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-
 <body>
   <!-- MultiStep Form -->
   <div class="container-fluid" id="grad1">
@@ -43,318 +44,407 @@
                 <fieldset>
                   <div class="form-card">
                     <h2 class="fs-title">Preencha as informações da sua empresa</h2>
-                    <p>Os campos marcados com * são obrigatórios.</p>
-                    <div class="divider">Informações da empresa</div>
-                    <div class="row">
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fas fa-building"></i><label class="required">Nome da empresa</label>
-                        <input type="text" placeholder="Digite o nome da sua empresa..." required>
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fas fa-user-tie"></i><label class="required">Responsável</label>
-                        <input type="text" placeholder="Digite o nome do responsável..." required>
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="far fa-id-card"></i><label class="required">CNPJ</label>
-                        <input type="text" id="cnpj" placeholder="Digite o CNPJ..." required>
-                        <p>Verifique o campo</p>
+                    <p class="fs-subtitle">Os campos marcados com * são obrigatórios.</p>
+                    <div class="divider active">
+                      <p class="divider--title">Informações da empresa<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fas fa-building"></i><label class="required">Nome da empresa</label>
+                            <input type="text" placeholder="Digite o nome da sua empresa..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fas fa-user-tie"></i><label class="required">Responsável</label>
+                            <input type="text" placeholder="Digite o nome do responsável..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="far fa-id-card"></i><label class="required">CNPJ</label>
+                            <input type="text" id="cnpj" placeholder="Digite o CNPJ..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="divider">Contato</div>
-                    <div class="row">
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fas fa-phone-alt"></i><label>Telefone</label>
-                        <input type="text" class="phone" placeholder="Digite o telefone com o DDD...">
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fas fa-mobile-alt"></i><label class="required">Celular</label>
-                        <input type="text" class="phone" placeholder="Digite o celular com o DDD..." required>
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fab fa-whatsapp"></i><label>Whatsapp</label>
-                        <input type="text" class="phone" placeholder="Digite o Whatsapp com o DDD...">
-                        <p>Verifique o campo</p>
+                    <div class="divider">
+                      <p class="divider--title">Contato<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fas fa-phone-alt"></i><label>Telefone</label>
+                            <input type="text" class="phone" placeholder="Digite o telefone com o DDD...">
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fas fa-mobile-alt"></i><label class="required">Celular</label>
+                            <input type="text" class="phone" placeholder="Digite o celular com o DDD..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fab fa-whatsapp"></i><label>Whatsapp</label>
+                            <input type="text" class="phone" placeholder="Digite o Whatsapp com o DDD...">
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fas fa-envelope"></i><label class="required">E-mail</label>
+                            <input type="email" class="phone" placeholder="Digite o seu e-mail..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fas fa-envelope"></i><label>E-mail 2</label>
+                            <input type="text" class="phone" placeholder="Digite outro e-mail...">
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <img src="./assets/website.png"></i><label>Site</label>
+                            <input type="text" class="phone" placeholder="Digite o endereço de seu site..">
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fas fa-envelope"></i><label class="required">E-mail</label>
-                        <input type="email" class="phone" placeholder="Digite o seu e-mail..." required>
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fas fa-envelope"></i><label>E-mail 2</label>
-                        <input type="text" class="phone" placeholder="Digite outro e-mail...">
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <img src="./assets/website.png"></i><label>Site</label>
-                        <input type="text" class="phone" placeholder="Digite o endereço de seu site..">
-                        <p>Verifique o campo</p>
+                    <div class="divider">
+                      <p class="divider--title">Redes sociais<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fab fa-linkedin"></i><label>LinkedIn</label>
+                            <input type="text" class="social" placeholder="Digite o seu LinkedIn...">
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fab fa-instagram-square"></i></i><label>Instagram</label>
+                            <input type="text" class="social" placeholder="Digite o seu Instagram...">
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fab fa-facebook"></i><label>Facebook</label>
+                            <input type="text" class="social" placeholder="Digite o seu Facebook...">
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="divider">Redes sociais</div>
-                    <div class="row">
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fab fa-linkedin"></i><label>LinkedIn</label>
-                        <input type="text" class="social" placeholder="Digite o seu LinkedIn...">
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fab fa-instagram-square"></i></i><label>Instagram</label>
-                        <input type="text" class="social" placeholder="Digite o seu Instagram...">
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <i class="fab fa-facebook"></i><label>Facebook</label>
-                        <input type="text" class="social" placeholder="Digite o seu Facebook...">
-                        <p>Verifique o campo</p>
-                      </div>
-                    </div>
-                    <div class="divider">Endereço</div>
-                    <div class="row">
-                      <div class="my-input-group col-12 col-md-8">
-                        <i class="fas fa-map-marked-alt"></i><label class="required" >Endereço</label>
-                        <input type="text" placeholder="Ex.: Av Paulista, 1400" required>
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-4">
-                        <label class="required" >CEP</label>
-                        <input type="text" placeholder="Digite seu CEP..." required>
-                        <p>Verifique o campo</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="my-input-group col-12 col-md-5">
-                        <label class="required" >Bairro</label>
-                        <input type="text" placeholder="Digite seu bairro..." required>
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-5">
-                        <label class="required" >Cidade</label>
-                        <input type="text" placeholder="Digite sua cidade..." required>
-                        <p>Verifique o campo</p>
-                      </div>
-                      <div class="my-input-group col-12 col-md-2">
-                        <label class="required" >Estado</label>
-                        <input type="text" placeholder="Ex.: SP" required>
-                        <p>Verifique o campo</p>
-                      </div>
-                    </div>
-                  </div> 
-                  <button type="submit" class="next action-button">Próximo 	&#8594;</i></button>
-                  <!-- <input type="button" name="next"  value="Next Step" /> -->
-                </fieldset>
-                <fieldset>
-                  <div class="form-card">
-                    <h2 class="fs-title">Informe serviços prestados e regiões atendidas</h2>
-                    <div class="divider">Serviços</div>
-                    <div class="row">
-                      <div class="my-input-group col-12 col-md-6">
-                        <i class="fas fa-wrench mb-4"></i><label>Serviços prestados</label>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Demolições</label>
+                    <div class="divider">
+                      <p class="divider--title">Endereço<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-8">
+                            <i class="fas fa-map-marked-alt"></i><label class="required">Endereço</label>
+                            <input type="text" placeholder="Ex.: Av Paulista, 1400" required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <label class="required">CEP</label>
+                            <input type="text" placeholder="Digite seu CEP..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
                         </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Limpeza do terreno</label>
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-5">
+                            <label class="required">Bairro</label>
+                            <input type="text" placeholder="Digite seu bairro..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-5">
+                            <label class="required">Cidade</label>
+                            <input type="text" placeholder="Digite sua cidade..." required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-2">
+                            <label class="required">Estado</label>
+                            <input type="text" placeholder="Ex.: SP" required>
+                            <p class="error-message">Verifique o campo</p>
+                          </div>
                         </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Movimentação de terra</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalação do canteiro de obras</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Contenções</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Execução de drenagem</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Fundações</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Execução de estruturas metálicas</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Execução de estruturas de madeira</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Execução de estruturas de concreto</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Montagem de fôrmas</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Serviços de armação</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Serviços de concretagem</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Alvenaria</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalaçao de divisórias</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Execução de telhados</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Serviços de impermeabilização</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Execução de isolamentos térmicos ou acústicos</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalação de Esquadrias</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalações hidráulicas, sanitárias e de gás</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalação de sistemas de prevenção e combate a incêndio</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalações elétricas</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalação de sistemas de proteção contra descargas atmosféricas</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalações de sistemas de ar-condicionado, de ventilação, refrigeração e aquecimento</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalação de elevadores, escadas ou esteiras rolantes</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Revestimento de paredes (chapisco, emboço, gesso, reboco, estucagem etc.)</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Montagem de forros</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Execução de pisos</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Pinturas</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalação de louças, metais e acessórios</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Instalação de vidros</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Limpeza final</label>
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="outros">
-                          <label class="form-check-label" for="exampleCheck1">Outros</label>
-                        </div>
-                        <div class="text-area mt-2 d-none">
-                          <label for="">Quais?</label>
-                          <input type="textarea">
-                        </div>
-                      </div>
-                      <div class="my-input-group col-12 col-md-6">
-                        <i class="fas fa-map-marked-alt"></i><label>Áreas atendidas</label>
-                        <select class="list-dt" id="month" name="expmonth">
-                          <option selected>Month</option>
-                          <option>January</option>
-                          <option>February</option>
-                          <option>March</option>
-                          <option>April</option>
-                          <option>May</option>
-                          <option>June</option>
-                          <option>July</option>
-                          <option>August</option>
-                          <option>September</option>
-                          <option>October</option>
-                          <option>November</option>
-                          <option>December</option>
-                        </select> 
                       </div>
                     </div>
                   </div>
-                  <button class="previous action-button-previous">&#8592; Anterior</button> 
-                  <button type="submit" class="next action-button">Próximo &#8594;</button>
+                  <button type="button" class="next action-button">Próximo &#8594;</i></button>
                 </fieldset>
                 <fieldset>
                   <div class="form-card">
-                    <h2 class="fs-title">Payment Information</h2>
-                    <div class="radio-group">
-                      <div class='radio' data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px"
-                          height="100px"></div>
-                      <div class='radio' data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px"
-                          height="100px"></div> <br>
-                    </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername"
-                      placeholder="" />
-                    <div class="row">
-                      <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno"
-                          placeholder="" /> </div>
-                      <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd"
-                          placeholder="***" /> </div>
+                    <h2 class="fs-title">Informe os serviços prestados, regiões atendidas e sua disponibilidade</h2>
+                    <p class="fs-subtitle">Os campos marcados com * são obrigatórios.</p>
+                    <div class="divider active">
+                      <p class="divider--title">Serviços prestados<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-6">
+                            <i class="fas fa-wrench mb-4"></i><label class="required">Serviços prestados</label>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Demolições</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                              <label class="form-check-label" for="exampleCheck2">Limpeza do terreno</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                              <label class="form-check-label" for="exampleCheck3">Movimentação de terra</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                              <label class="form-check-label" for="exampleCheck4">Instalação do canteiro de
+                                obras</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck5">
+                              <label class="form-check-label" for="exampleCheck5">Contenções</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck6">
+                              <label class="form-check-label" for="exampleCheck6">Execução de drenagem</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck7">
+                              <label class="form-check-label" for="exampleCheck7">Fundações</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck8">
+                              <label class="form-check-label" for="exampleCheck8">Execução de estruturas
+                                metálicas</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck10">
+                              <label class="form-check-label" for="exampleCheck10">Execução de estruturas de
+                                madeira</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck11">
+                              <label class="form-check-label" for="exampleCheck11">Execução de estruturas de
+                                concreto</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck12">
+                              <label class="form-check-label" for="exampleCheck12">Montagem de fôrmas</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck13">
+                              <label class="form-check-label" for="exampleCheck13">Serviços de armação</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck14">
+                              <label class="form-check-label" for="exampleCheck14">Serviços de concretagem</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck15">
+                              <label class="form-check-label" for="exampleCheck15">Alvenaria</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck16">
+                              <label class="form-check-label" for="exampleCheck16">Instalaçao de divisórias</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck17">
+                              <label class="form-check-label" for="exampleCheck17">Execução de telhados</label>
+                            </div>
+                          </div>
+                          <div class="my-input-group col-12 col-md-6">
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck18">
+                              <label class="form-check-label" for="exampleCheck18">Serviços de impermeabilização</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck19">
+                              <label class="form-check-label" for="exampleCheck19">Execução de isolamentos térmicos ou
+                                acústicos</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck20">
+                              <label class="form-check-label" for="exampleCheck20">Instalação de Esquadrias</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck21">
+                              <label class="form-check-label" for="exampleCheck21">Instalações hidráulicas, sanitárias e
+                                de gás</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck22">
+                              <label class="form-check-label" for="exampleCheck22">Instalação de sistemas de prevenção e
+                                combate a incêndio</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck23">
+                              <label class="form-check-label" for="exampleCheck23">Instalações elétricas</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck24">
+                              <label class="form-check-label" for="exampleCheck24">Instalação de sistemas de proteção
+                                contra descargas atmosféricas</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck25">
+                              <label class="form-check-label" for="exampleCheck25">Instalações de sistemas de
+                                ar-condicionado, de ventilação, refrigeração e aquecimento</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck26">
+                              <label class="form-check-label" for="exampleCheck26">Instalação de elevadores, escadas ou
+                                esteiras rolantes</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck27">
+                              <label class="form-check-label" for="exampleCheck27">Revestimento de paredes (chapisco,
+                                emboço, gesso, reboco, estucagem etc.)</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck28">
+                              <label class="form-check-label" for="exampleCheck28">Montagem de forros</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck29">
+                              <label class="form-check-label" for="exampleCheck29">Execução de pisos</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck30">
+                              <label class="form-check-label" for="exampleCheck30">Pinturas</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck31">
+                              <label class="form-check-label" for="exampleCheck31">Instalação de louças, metais e
+                                acessórios</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck32">
+                              <label class="form-check-label" for="exampleCheck32">Instalação de vidros</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck33">
+                              <label class="form-check-label" for="exampleCheck33">Limpeza final</label>
+                            </div>
+                            <div class="form-check">
+                              <input type="checkbox" class="form-check-input" id="outros">
+                              <label class="form-check-label" for="outros">Outros</label>
+                            </div>
+                            <div class="text-area mt-2 d-none">
+                              <label for="">Quais?</label>
+                              <textarea rows="4" cols="50" wrap="physical" name="comments"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="row">
-                      <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
-                      <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
-                          <option selected>Month</option>
-                          <option>January</option>
-                          <option>February</option>
-                          <option>March</option>
-                          <option>April</option>
-                          <option>May</option>
-                          <option>June</option>
-                          <option>July</option>
-                          <option>August</option>
-                          <option>September</option>
-                          <option>October</option>
-                          <option>November</option>
-                          <option>December</option>
-                        </select> <select class="list-dt" id="year" name="expyear">
-                          <option selected>Year</option>
-                        </select> </div>
+                    <div class="divider">
+                      <p class="divider--title">Regiões atendidas<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12 col-md-6">
+                            <i class="fas fa-map-marked-alt mb-4"></i><label class="required">Regiões atendidas</label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div> <input type="button" name="previous" class="previous action-button-previous"
-                    value="Previous" /> <input type="button" name="make_payment" class="next action-button"
-                    value="Confirm" />
+                    <div class="divider">
+                      <p class="divider--title">Equipe técnica<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group profissional col-12">
+                            <i class="fas fa-users"></i><label>Equipe técnica</label>
+                            <div class="row profissional--row">
+                              <div class="col-8 col-md-4 column-left--profissional">
+                                <select class="form-control profissional--select" id="exampleFormControlSelect1">
+                                  <option disabled selected>Profissional</option>
+                                  <option>Engenheiros</option>
+                                  <option>Arquitetos</option>
+                                  <option>Técnicos</option>
+                                  <option>Encarregados</option>
+                                </select>
+                              </div>
+                              <div class="col-4 col-md-2 column-right--profissional">
+                                <input placeholder="Qtd..." class="profissional--quantity" type="text">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="buttons-container">
+                            <button type="button" class="profissional--button btn btn-primary">&#43;</button>
+                            <button type="button"
+                              class="profissional--button profissional--button-outros btn btn-success">Outros</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider">
+                      <p class="divider--title">Disponibilidade<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group profissional col-12 col-md-6">
+                            <i class="fas fa-calendar-alt"></i><label class="required">Aceito convites a partir de:</label>
+                            <input class="datepicker" placeholder="Escolha uma data..." type="text" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="previous action-button-previous">&#8592; Anterior</button>
+                  <button type="button" class="next action-button">Próximo &#8594;</button>
+                </fieldset>
+                <fieldset>
+                  <div class="form-card">
+                    <h2 class="fs-title">Preencha as informações sobre suas certificações, atestados e referências</h2>
+                    <div class="divider active">
+                      <p class="divider--title">Certificações e atestados<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12">
+                            <i class="fas fa-building"></i><label>Certificações e atestados</label>
+                            <div class="form-check check-atestados">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Sempre exibir minhas certificações e atestados</label>
+                            </div>
+                            <div class="row row-atestados">
+                              <div class="certificacao d-none">
+                                <div class="col-12 col-md-6">
+                                  <h2 class="field-title">Informações da certificação</h2>
+                                  <div class="row">
+                                    <div class="col-12 col-md-8">
+                                      <input type="text" placeholder="Digite o nome do certificador...">
+                                    </div>
+                                    <div class="col-12 col-md-4 expiration-column">
+                                      <input class="mb-0 datepicker" placeholder="Válido até..." type="text" required>
+                                    </div>
+                                  </div>
+                                  <label for="comments">Descrição:</label>
+                                  <textarea rows="4" cols="50" wrap="physical" name="comments"></textarea>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlFile1">Upload do certificado</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="atestado d-none">
+                                <div class="col-12 col-md-6">
+                                  <h2 class="field-title">Informações do atestado</h2>
+                                  <div class="row">
+                                    <div class="col-12 col-md-8">
+                                      <input type="text" placeholder="Digite o nome do orgão expeditor...">
+                                    </div>
+                                    <div class="col-12 col-md-4 expiration-column">
+                                      <input class="mb-0" placeholder="Válido até..." type="text" id="datepicker" required>
+                                    </div>
+                                  </div>
+                                  <label for="comments">Descrição:</label>
+                                  <textarea rows="4" cols="50" wrap="physical" name="comments"></textarea>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlFile1">Upload do certificado</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn-primary button-certificacao">Adicionar Certificação</button>
+                            <button type="button" class="btn btn-success button-atestado">Adicionar Atestado</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="previous action-button-previous">&#8592; Anterior</button>
+                  <button type="button" class="next action-button">Finalizar</button>
                 </fieldset>
                 <fieldset>
                   <div class="form-card">
@@ -377,7 +467,5 @@
       </div>
     </div>
   </div>
-
 </body>
-
 </html>

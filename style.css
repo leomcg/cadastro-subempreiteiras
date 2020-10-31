@@ -39,6 +39,11 @@ body {
 }
 
 .divider {
+  position: relative;
+  cursor: pointer;
+}
+
+.divider--title {
   font-size: 18px;
   color: #DB5461;
   width: 100%;
@@ -47,10 +52,75 @@ body {
   font-size: 19px;
 }
 
+.divider i {
+  position: absolute;
+  right: 0;
+  color: #DB5461;
+}
+
+.divider--content {
+  display: none;
+}
+
+.active .divider--title i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.active .divider--content {
+  display: block;
+}
+
+.profissional--button {
+  height: 38px;
+  font-size: 25px;
+  line-height: 0;
+  margin-left: 15px;
+  width: auto;
+}
+
 @media only screen and (max-width: 767px) {
-  .divider {
-    text-align: center;
+  .profissional--button {
+    margin-left: 15px;
   }
+}
+
+.profissional--button-outros {
+  font-size: 16px;
+  width: 100px;
+}
+
+.column-left--profissional {
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .column-left--profissional {
+    padding-right: 7.5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .column-right--profissional {
+    padding-left: 7.5px;
+    padding-right: 0;
+  }
+}
+
+.profissional--row {
+  margin: 15px 0;
+}
+
+.profissional--row .profissional--quantity {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 6px !important;
+}
+
+.profissional--outros {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 6px 15px !important;
 }
 
 #msform fieldset .form-card {
@@ -73,10 +143,30 @@ body {
   }
 }
 
-#msform fieldset .form-card p {
+.fs-subtitle {
   font-size: 14px;
   color: darkred;
   margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 767px) {
+  .fs-subtitle {
+    font-size: 12px;
+  }
+}
+
+.check-atestados {
+  margin-bottom: 15px;
+}
+
+.check-atestados input {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.check-atestados label {
+  margin: 0 !important;
+  font-size: 13px !important;
 }
 
 #msform fieldset {
@@ -91,7 +181,8 @@ body {
   position: relative;
 }
 
-i {
+.my-input-group i {
+  position: relative;
   margin-bottom: 0;
   margin-right: 8px;
   font-size: 20px;
@@ -99,7 +190,7 @@ i {
 }
 
 @media only screen and (max-width: 480px) {
-  i {
+  .my-input-group i {
     font-size: 16px;
     margin-top: 3px;
   }
@@ -146,7 +237,7 @@ i {
   color: #2C3E50;
 }
 
-.my-input-group p {
+.error-message {
   font-size: 10px;
   position: absolute;
   top: 10px;
@@ -159,7 +250,7 @@ i {
 #msform textarea {
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-bottom: 20px;
   margin-top: 4px;
   width: 100%;
@@ -181,9 +272,9 @@ i {
 #msform textarea:focus {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border: none;
-  border: 2px solid #2C3E50;
-  outline-width: 0;
+  border: none !important;
+  border: 2px solid #2C3E50 !important;
+  outline-width: 0 !important;
 }
 
 input[type=checkbox] {
@@ -263,6 +354,26 @@ select.list-dt:focus {
   margin-bottom: 5px;
   font-weight: bold;
   text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .fs-title {
+    font-size: 18px;
+  }
+}
+
+.field-title {
+  font-size: 20px;
+  color: #2C3E50;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .field-title {
+    font-size: 16px;
+  }
 }
 
 #progressbar {
