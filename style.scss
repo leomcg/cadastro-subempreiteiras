@@ -82,6 +82,49 @@ body {
   
 }
 
+.button-certificacao {
+  width: 100%;
+ 
+}
+
+.button-atestado { 
+  width: 100%;
+  
+}
+.button-cursos { 
+  width: 100%;
+  
+}
+.button-clientes { 
+  width: 100%;
+  
+}
+
+.button-column-right {
+  @media only screen and (max-width: 767px) {
+    padding-left: 4px;
+  }
+}
+
+.button-column-left {
+  @media only screen and (max-width: 767px) {
+    padding-right: 4px;
+  }
+}
+
+.diploma {
+  width: 21px !important;
+  height: 21px !important;
+}
+.btn {
+  white-space: normal;
+  line-height: normal;
+}
+#exampleFormControlFile1 {
+  overflow: hidden;
+}
+
+
 .column-left--profissional {
   padding-left: 0;
   @media only screen and (max-width: 767px) {
@@ -135,13 +178,16 @@ body {
 
 .check-atestados {
   margin-bottom: 15px;
+  color: darkgrey !important;
   input {
     width: 13px !important;
     height: 13px !important;
+    border-color: darkgrey !important;
   }
   label {
     margin: 0 !important;
     font-size: 13px !important;
+    color: darkgrey !important;
   }
 }
 
@@ -352,6 +398,7 @@ select.list-dt:focus {
 }
 
 #progressbar #account:before {
+  cursor: pointer;
   content: "";
   background-image: url(./assets/user.png);
   background-size: 40px 40px;
@@ -361,6 +408,7 @@ select.list-dt:focus {
 }
 
 #progressbar #personal:before {
+  cursor: pointer;
   content: "";
   background-image: url(./assets/worker.png);
   background-size: 40px 40px;
@@ -370,6 +418,7 @@ select.list-dt:focus {
 }
 
 #progressbar #payment:before {
+  cursor: pointer;
   content: "";
   background-image: url(./assets/certificate.png);
   background-size: 40px 40px;

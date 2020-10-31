@@ -16,17 +16,16 @@ $(document).ready(function(){
   // Adiocionar profissionais
   const markupProfissional = `
   <div class="row profissional--row">
-    <div class="col-8 col-md-4 pl-0 pr-1">
+    <div class="col-8 col-md-4 column-left--profissional">
       <select class="form-control profissional--select" id="exampleFormControlSelect1">
         <option disabled selected>Profissional</option>
         <option>Engenheiros</option>
         <option>Arquitetos</option>
         <option>Técnicos</option>
         <option>Encarregados</option>
-        <option id=profissinal--outro>Quero acrescentar outros</option>
       </select>
     </div>
-    <div class="col-4 col-md-2 pr-0 pl-1">
+    <div class="col-4 col-md-2 column-right--profissional">
       <input placeholder="Qtd..." class="profissional--quantity" type="text">
     </div>
   </div>
@@ -34,10 +33,10 @@ $(document).ready(function(){
   
   const markupOutrosProfissionais = `
   <div class="row profissional--row">
-    <div class="col-8 col-md-4 pl-0 pr-1">
+    <div class="col-8 col-md-4 pl-0">
       <input class="profissional--outros" type="text" placeholder="Tipo de profissional...">
     </div>
-    <div class="col-4 col-md-2 pr-0 pl-1">
+    <div class="col-4 col-md-2">
       <input placeholder="Qtd..." class="profissional--quantity" type="text">
     </div>
   </div>
@@ -53,7 +52,7 @@ $(document).ready(function(){
     $('.profissional').append(markupOutrosProfissionais);
   });
 
-  // Certificacoes e atestados
+  // Adicionar cursos / atestados / clientes
   $('.button-certificacao').on('click', () => {
     $('.row-atestados').append($('.certificacao').html());
   });
@@ -62,10 +61,79 @@ $(document).ready(function(){
     $('.row-atestados').append($('.atestado').html());
   });
   
+  $('.button-cursos').on('click', () => {
+    $('.row-cursos').append($('.cursos').html());
+  });
+
+  $('.button-clientes').on('click', () => {
+    $('.row-clientes').append($('.clientes').html());
+  });
+
+  // Progress bar navigation
+  $('#account').on('click', () => {
+    $('fieldset').hide();
+    $('#1').css({
+      'display': 'block',
+      'opacity': 1
+    });
+  });
+  $('#personal').on('click', () => {
+    $('fieldset').hide();
+    $('#2').css({
+      'display': 'block',
+      'opacity': 1
+    });
+  });
+  $('#payment').on('click', () => {
+    $('fieldset').hide();
+    $('#3').css({
+      'display': 'block',
+      'opacity': 1
+    });
+  });
+  
   //Date picker
   $( function() {
     $( ".datepicker" ).datepicker();
   } );
+
+  // Cidades e Estados
+  $(document).ready(function () {
+		
+    $.getJSON('estados.json', function (data) {
+
+      var items = [];
+      var options = '<option value="">escolha um estado</option>';	
+
+      $.each(data, function (key, val) {
+        options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+      });					
+      $("#estados").html(options);				
+      
+      $("#estados").change(function () {				
+      
+        var options_cidades = '';
+        var str = "";					
+        
+        $("#estados option:selected").each(function () {
+          str += $(this).text();
+        });
+        
+        $.each(data, function (key, val) {
+          if(val.nome == str) {							
+            $.each(val.cidades, function (key_city, val_city) {
+              options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+            });							
+          }
+        });
+
+        $("#cidades").html(options_cidades);
+        
+      }).change();		
+    
+    });
+  
+  });
   
   jQuery(function($){
     $.datepicker.regional['pt-BR'] = {
