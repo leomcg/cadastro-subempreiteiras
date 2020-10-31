@@ -1,6 +1,10 @@
 $(document).ready(function(){
   //masks
   $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
+  $('.phone').mask('(00)00000-0000');
+  $('#cep').mask('00000-000');
+  $('#estado').mask('AA');
+  $('.date').mask('00/00/0000')
 
   // Outros Checkbox
   $('#outros').on('change', () => {
@@ -67,6 +71,9 @@ $(document).ready(function(){
 
   $('.button-clientes').on('click', () => {
     $('.row-clientes').append($('.clientes').html());
+  });
+  $('.button-obras').on('click', () => {
+    $('.row-obras').append($('.obras').html());
   });
 
   // Progress bar navigation

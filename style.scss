@@ -82,22 +82,13 @@ body {
   
 }
 
-.button-certificacao {
+.button-certificacao,
+.button-atestado,
+.button-cursos,
+.button-clientes,
+.button-obras { 
   width: 100%;
- 
-}
-
-.button-atestado { 
-  width: 100%;
-  
-}
-.button-cursos { 
-  width: 100%;
-  
-}
-.button-clientes { 
-  width: 100%;
-  
+  margin-top: 20px;
 }
 
 .button-column-right {
@@ -113,8 +104,8 @@ body {
 }
 
 .diploma {
-  width: 21px !important;
-  height: 21px !important;
+  width: 20px !important;
+  height: 20px !important;
 }
 .btn {
   white-space: normal;
@@ -145,6 +136,11 @@ body {
     margin-bottom: 0 !important;
     padding: 6px !important;
   }
+}
+.row-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profissional--outros {
@@ -177,11 +173,16 @@ body {
 }
 
 .check-atestados {
-  margin-bottom: 15px;
+  margin-left: 15px;
   color: darkgrey !important;
+  display: inline;
+  @media only screen and (max-width: 767px) {
+    display: block;
+    margin-left: 0;
+  }
   input {
-    width: 13px !important;
-    height: 13px !important;
+    width: 12px !important;
+    height: 12px !important;
     border-color: darkgrey !important;
   }
   label {
@@ -376,6 +377,25 @@ select.list-dt:focus {
   }
 }
 
+.main-title {
+  color: #fff;
+  text-align: center;
+}
+
+.curso-container {
+  box-shadow: 5px 5px 20px;
+  padding-top: 10px;
+  margin: 0 20px 20px 40px;
+  @media only screen and (max-width: 767px) {
+    margin: 0;
+    box-shadow: none;
+    margin-bottom: 15px;
+    border: 2px solid #2C3E50;
+    border-radius: 25px;
+  }
+  
+}
+
 #progressbar {
   margin-bottom: 30px;
   overflow: hidden;
@@ -468,6 +488,10 @@ select.list-dt:focus {
 .radio-group {
   position: relative;
   margin-bottom: 25px
+}
+
+footer {
+  text-align: center;
 }
 
 .radio {

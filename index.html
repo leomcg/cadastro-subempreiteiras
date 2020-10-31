@@ -15,11 +15,12 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Cadastro de subempreiteiras</title>
 </head>
 <body>
   <!-- MultiStep Form -->
   <div class="container-fluid" id="grad1">
+    <h1 class="main-title">Cadastro de subempreiteiras</h1>
     <div class="row justify-content-center mt-0">
       <div class="col-11 col-md-10">
         <div class="card px-0 pt-4 pb-0">
@@ -45,7 +46,7 @@
                   <div class="form-card">
                     <h2 class="fs-title">Preencha as informações da sua empresa</h2>
                     <p class="fs-subtitle">Os campos marcados com * são obrigatórios.</p>
-                    <div class="divider">
+                    <div class="divider active">
                       <p class="divider--title">Informações da empresa<i class="fas fa-chevron-down"></i></p>
                       <div class="divider--content">
                         <div class="row">
@@ -139,7 +140,7 @@
                           </div>
                           <div class="my-input-group col-12 col-md-4">
                             <label class="required">CEP</label>
-                            <input type="text" placeholder="Digite seu CEP..." required>
+                            <input id="cep" type="text" placeholder="Digite seu CEP..." required>
                             <p class="error-message">Verifique o campo</p>
                           </div>
                         </div>
@@ -156,7 +157,7 @@
                           </div>
                           <div class="my-input-group col-12 col-md-2">
                             <label class="required">Estado</label>
-                            <input type="text" placeholder="Ex.: SP" required>
+                            <input id="estado" type="text" placeholder="Ex.: SP" required>
                             <p class="error-message">Verifique o campo</p>
                           </div>
                         </div>
@@ -169,7 +170,7 @@
                   <div class="form-card">
                     <h2 class="fs-title">Informe os serviços prestados, regiões atendidas e sua disponibilidade</h2>
                     <p class="fs-subtitle">Os campos marcados com * são obrigatórios.</p>
-                    <div class="divider">
+                    <div class="divider active">
                       <p class="divider--title">Serviços prestados<i class="fas fa-chevron-down"></i></p>
                       <div class="divider--content">
                         <div class="row">
@@ -386,19 +387,19 @@
                 <fieldset id=3>
                   <div class="form-card">
                     <h2 class="fs-title">Preencha as informações sobre suas certificações, atestados e referências</h2>
-                    <div class="divider">
+                    <div class="divider active">
                       <p class="divider--title">Certificações e atestados<i class="fas fa-chevron-down"></i></p>
                       <div class="divider--content">
                         <div class="row">
                           <div class="my-input-group col-12">
-                            <img class="diploma" src="./assets/diploma.png"></i><label>Certificações e atestados</label>
+                            <img class="diploma" src="./assets/diploma.png"></i><label class="mb-4">Certificações e atestados</label>
                             <div class="form-check check-atestados">
                               <input type="checkbox" class="form-check-input" id="exampleCheck1">
                               <label class="form-check-label" for="exampleCheck1">Sempre exibir minhas certificações e atestados</label>
                             </div>
                             <div class="row row-atestados">
                               <div class="certificacao d-none">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-5 curso-container">
                                   <div class="row">
                                     <div class="col-12 col-md-8">
                                       <label for="">Certificador</label>
@@ -418,14 +419,14 @@
                                 </div>
                               </div>
                               <div class="atestado d-none">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-5 curso-container">
                                   <div class="row">
                                     <div class="col-12 col-md-8">
-                                      <label for="Orgão expeditor"></label>
+                                      <label for="Orgão expeditor">Orgão expeditor</label>
                                       <input type="text" placeholder="Digite o nome do orgão expeditor...">
                                     </div>
                                     <div class="col-12 col-md-4 expiration-column">
-                                      <label for="Válido até"></label>
+                                      <label for="Válido até">Válido até</label>
                                       <input class="mb-0" placeholder="Escolha uma data" type="text" id="datepicker" required>
                                     </div>
                                   </div>
@@ -455,14 +456,14 @@
                       <div class="divider--content">
                         <div class="row">
                           <div class="my-input-group col-12">
-                            <img class="diploma" src="./assets/diploma.png"></i><label>Cursos e treinamentos</label>
+                            <i class="fas fa-graduation-cap"></i><label class="mb-4">Cursos e treinamentos</label>
                             <div class="form-check check-atestados">
                               <input type="checkbox" class="form-check-input" id="exampleCheck55">
                               <label class="form-check-label" for="exampleCheck55">Sempre exibir informações sobre meus cursos</label>
                             </div>
                             <div class="row row-cursos">
                               <div class="cursos d-none">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-5 curso-container">
                                   <div class="row">
                                     <div class="col-12 col-md-8">
                                       <label for="">Instituição</label>
@@ -500,14 +501,14 @@
                       <div class="divider--content">
                         <div class="row">
                           <div class="my-input-group col-12">
-                            <img class="diploma" src="./assets/client.png"></i><label>Clientes e depoimentos</label>
+                            <img class="diploma" src="./assets/client.png"></i><label class="mb-4">Clientes e depoimentos</label>
                             <div class="form-check check-atestados">
                               <input type="checkbox" class="form-check-input" id="exampleCheck1">
                               <label class="form-check-label" for="exampleCheck1">Sempre exibir informações sobre meus clientes atendidos</label>
                             </div>
                             <div class="row row-clientes">
                               <div class="clientes d-none">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-5 curso-container">
                                   <label for="">Cliente</label>
                                   <input placeholder="Digite o nome do cliente..." type="text">
                                   <div class="form-group">
@@ -538,20 +539,72 @@
                         </div>
                       </div>
                     </div>
+                    <div class="divider">
+                      <p class="divider--title">Galeria<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12">
+                            <i class="fas fa-film"></i><label class="mb-4" for="outra coisa">Galeria</label>
+                            <div class="form-check check-atestados">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Sempre exibir imagens e vídeos da minha empresa</label>
+                            </div>
+                            <div class="mt-4 row">
+                              <div class="col-12">
+                                <label for="exampleFormControlFile1">Upload de fotos e vídeos</label>
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                <label for="comments">Apresentação da empresa:</label>
+                                <textarea rows="4" cols="50" wrap="physical" name="comments"></textarea>
+                                <label for="comments">Comentários de nossos clientes:</label>
+                                <textarea rows="4" cols="50" wrap="physical" name="comments"></textarea>
+                              </div>
+                            </div>
+                            <div class="row row-obras">
+                              <div class="obras d-none">
+                                <div class="col-12 col-md-5 curso-container">
+                                  <div class="row">
+                                    <div class="col-12 col-md-8">
+                                      <label for="">Nome da obra</label>
+                                      <input class="required" type="text" placeholder="Digite o nome da instituição...">
+                                    </div>
+                                    <div class="col-12 col-md-4 expiration-column">
+                                      <label for="">Data da realização</label>
+                                      <input class="mb-0 datepicker" placeholder="Escolha uma data..." type="text" required>
+                                    </div>
+                                  </div>
+                                  <label for="description">Descrição:</label>
+                                  <textarea rows="4" cols="50" wrap="physical" name="description"></textarea>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlFile1">Upload da imagems e vídeos</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row row-buttons">
+                              <div class="col-md-3 col-12 button-column-left">
+                                <button type="button" class="btn btn-primary button-obras">Adicionar serviço realizado</button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <button class="previous action-button-previous">&#8592; Anterior</button>
                   <button type="button" class="next action-button">Finalizar</button>
                 </fieldset>
                 <fieldset id="4">
                   <div class="form-card">
-                    <h2 class="fs-title text-center">Success !</h2> <br><br>
+                    <h2 class="fs-title text-center">Parabéns!</h2> <br><br>
                     <div class="row justify-content-center">
-                      <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
+                      <div class="col-3"> <img src="./assets/iconfinder_Tick_Mark_Dark_1398912.png"
                           class="fit-image"> </div>
                     </div> <br><br>
                     <div class="row justify-content-center">
                       <div class="col-7 text-center">
-                        <h5>You Have Successfully Signed Up</h5>
+                        <h5>Você concluiu seu cadastro com sucesso</h5>
                       </div>
                     </div>
                   </div>
@@ -562,6 +615,7 @@
         </div>
       </div>
     </div>
+    <footer>leomcg@gmail.com</footer>
   </div>
 </body>
 </html>
