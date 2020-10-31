@@ -91,17 +91,17 @@
                         <div class="row">
                           <div class="my-input-group col-12 col-md-4">
                             <i class="fas fa-envelope"></i><label class="required">E-mail</label>
-                            <input type="email" class="phone" placeholder="Digite o seu e-mail..." required>
+                            <input type="email" placeholder="Digite o seu e-mail..." required>
                             <p class="error-message">Verifique o campo</p>
                           </div>
                           <div class="my-input-group col-12 col-md-4">
                             <i class="fas fa-envelope"></i><label>E-mail 2</label>
-                            <input type="text" class="phone" placeholder="Digite outro e-mail...">
+                            <input type="text" placeholder="Digite outro e-mail...">
                             <p class="error-message">Verifique o campo</p>
                           </div>
                           <div class="my-input-group col-12 col-md-4">
                             <img src="./assets/website.png"></i><label>Site</label>
-                            <input type="text" class="phone" placeholder="Digite o endereço de seu site..">
+                            <input type="text" placeholder="Digite o endereço de seu site..">
                             <p class="error-message">Verifique o campo</p>
                           </div>
                         </div>
@@ -336,6 +336,17 @@
                         <div class="row">
                           <div class="my-input-group col-12 col-md-6">
                             <i class="fas fa-map-marked-alt mb-4"></i><label class="required">Regiões atendidas</label>
+                            <div class="row">
+                              <div class="col-12 col-md-4">
+                                <select class="form-control" id="estados">
+                                  <option value=""></option>
+                                </select>
+                              </div>
+                              <div class="col-12 col-md-4">
+                                <select class="form-control" id="cidades">
+                                </select>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -375,7 +386,7 @@
                         <div class="row">
                           <div class="my-input-group col-12 col-md-6">
                             <i class="fas fa-calendar-alt"></i><label class="required">Aceito convites a partir de:</label>
-                            <input class="datepicker" placeholder="Escolha uma data..." type="text" required>
+                            <input class="datepicker date" placeholder="Escolha uma data..." type="text" required>
                           </div>
                         </div>
                       </div>
@@ -407,7 +418,7 @@
                                     </div>
                                     <div class="col-12 col-md-4 expiration-column">
                                       <label for="">Valido até</label>
-                                      <input class="mb-0 datepicker" placeholder="Escolha uma data..." type="text" required>
+                                      <input class="mb-0 datepicker date" placeholder="Escolha uma data..." type="text" required>
                                     </div>
                                   </div>
                                   <label for="comments">Descrição:</label>
@@ -427,7 +438,7 @@
                                     </div>
                                     <div class="col-12 col-md-4 expiration-column">
                                       <label for="Válido até">Válido até</label>
-                                      <input class="mb-0" placeholder="Escolha uma data" type="text" id="datepicker" required>
+                                      <input class="mb-0 date datepicker" placeholder="Escolha uma data" type="text" id="datepicker" required>
                                     </div>
                                   </div>
                                   <label for="comments">Descrição:</label>
@@ -471,7 +482,7 @@
                                     </div>
                                     <div class="col-12 col-md-4 expiration-column">
                                       <label for="">Data da realização</label>
-                                      <input class="mb-0 datepicker" placeholder="Escolha uma data..." type="text" required>
+                                      <input class="mb-0 datepicker date" placeholder="Escolha uma data..." type="text" required>
                                     </div>
                                   </div>
                                   <label for="description">Descrição:</label>
@@ -524,7 +535,7 @@
                                     </div>
                                     <div class="col-md-6 col-12">
                                       <label for="">Telefone</label>
-                                      <input type="text" placeholder="Digite o telefone do contato...">
+                                      <input type="text" class="phone" placeholder="Digite o telefone do contato...">
                                     </div>
                                   </div>
                                 </div>
@@ -569,7 +580,7 @@
                                     </div>
                                     <div class="col-12 col-md-4 expiration-column">
                                       <label for="">Data da realização</label>
-                                      <input class="mb-0 datepicker" placeholder="Escolha uma data..." type="text" required>
+                                      <input class="mb-0 datepicker date" placeholder="Escolha uma data..." type="text" required>
                                     </div>
                                   </div>
                                   <label for="description">Descrição:</label>
@@ -586,7 +597,6 @@
                                 <button type="button" class="btn btn-primary button-obras">Adicionar serviço realizado</button>
                               </div>
                             </div>
-                            
                           </div>
                         </div>
                       </div>
