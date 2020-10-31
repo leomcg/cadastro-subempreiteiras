@@ -1,4 +1,10 @@
 $(document).ready(function(){
+   //Date picker
+   
+   $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+
   //masks
   $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
   $('.phone').mask('(00)00000-0000');
@@ -98,11 +104,6 @@ $(document).ready(function(){
       'opacity': 1
     });
   });
-  
-  //Date picker
-  $( function() {
-    $( ".datepicker" ).datepicker();
-  } );
 
   // Cidades e Estados
   $(document).ready(function () {
@@ -110,7 +111,7 @@ $(document).ready(function(){
     $.getJSON('estados.json', function (data) {
 
       var items = [];
-      var options = '<option value="">Escolha um estado...</option>';	
+      var options = '<option value="">Escolha um estado</option>';	
 
       $.each(data, function (key, val) {
         options += '<option value="' + val.nome + '">' + val.nome + '</option>';
