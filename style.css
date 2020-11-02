@@ -27,6 +27,19 @@ body {
   }
 }
 
+#rangeInput {
+  width: 80%;
+  margin-top: 8px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  #rangeInput {
+    width: 100%;
+  }
+}
+
 #msform {
   text-align: center;
   position: relative;
@@ -62,7 +75,13 @@ body {
   display: none;
 }
 
-.active .divider--title i {
+.divider--icon {
+  position: relative !important;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.active .fa-chevron-down {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -118,7 +137,7 @@ body {
 
 .btn {
   white-space: normal;
-  line-height: normal;
+  line-height: 0;
 }
 
 #exampleFormControlFile1 {
@@ -304,8 +323,14 @@ body {
   display: none;
 }
 
-#msform input:not([type=checkbox]),
-#msform textarea {
+input[type=radio] {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=range]),
+textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -320,8 +345,8 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  #msform input:not([type=checkbox]),
-  #msform textarea {
+  input:not([type=checkbox]):not([type=radio]):not([type=range]),
+  textarea {
     margin-bottom: 11px;
   }
 }
@@ -435,6 +460,7 @@ select.list-dt:focus {
 }
 
 .main-title {
+  padding-top: 20px;
   color: #fff;
   text-align: center;
 }
