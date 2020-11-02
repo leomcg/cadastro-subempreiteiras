@@ -373,18 +373,12 @@
                 </fieldset>
                 <fieldset id=3>
                   <div class="form-card">
-                    <h2 class="fs-title">Preencha as informações sobre suas certificações, atestados e referências</h2>
                     <div class="divider active">
-                      <p class="divider--title">Certificações e atestados<i class="fas fa-chevron-down"></i></p>
+                      <p class="divider--title"><img src="./assets/atestado.png" style="width: 20px; margin-right: 8px;"> Certificações<i class="fas fa-chevron-down"></i></p>
                       <div class="divider--content">
                         <div class="row">
                           <div class="my-input-group col-12">
-                            <img class="diploma" src="./assets/diploma.png"></i><label class="mb-4">Certificações e atestados</label>
-                            <div class="form-check check-atestados">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Sempre exibir minhas certificações e atestados</label>
-                            </div>
-                            <div class="row row-atestados">
+                            <div class="row row-certificacoes">
                               <div class="certificacao d-none">
                                 <div class="col-12 col-md-5 curso-container">
                                   <div class="row">
@@ -405,8 +399,36 @@
                                   </div>
                                 </div>
                               </div>
+                            </div>
+                            <div class="row row-buttons">
+                              <div class="col-md-3 col-6 button-column-left">
+                                <button type="button" class="btn btn-primary button-certificacao">Adicionar Certificação</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divider">
+                      <p class="divider--title"><img src="./assets/diploma-red.png" style="width: 25px; margin-right: 10px">Atestados<i class="fas fa-chevron-down"></i></p>
+                      <div class="divider--content">
+                        <div class="row">
+                          <div class="my-input-group col-12">
+                            <div class="row row-atestados">
                               <div class="atestado d-none">
                                 <div class="col-12 col-md-5 curso-container">
+                                  <div class="form-check check-privacidade">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      Exibir sempre
+                                    </label>
+                                  </div>
+                                  <div class="form-check check-privacidade mb-3">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      Exibir apenas para quem eu enviar propostas
+                                    </label>
+                                  </div>
                                   <div class="row">
                                     <div class="col-12 col-md-8">
                                       <label for="Orgão expeditor">Orgão expeditor</label>
@@ -427,11 +449,8 @@
                               </div>
                             </div>
                             <div class="row row-buttons">
-                              <div class="col-md-3 col-6 button-column-left">
-                                <button type="button" class="btn btn-primary button-certificacao">Adicionar Certificação</button>
-                              </div>
                               <div class="col-md-3 col-6 button-column-right">
-                                <button type="button" class="btn btn-success button-atestado">Adicionar Atestado</button>
+                                <button type="button" class="btn btn-primary button-atestado">Adicionar Atestado</button>
                               </div>
                             </div>
                           </div>
@@ -439,18 +458,14 @@
                       </div>
                     </div>
                     <div class="divider">
-                      <p class="divider--title">Cursos e treinamentos<i class="fas fa-chevron-down"></i></p>
+                      <p class="divider--title"><i class="fas fa-graduation-cap divider--icon"></i>Cursos e treinamentos<i class="fas fa-chevron-down"></i></p>
                       <div class="divider--content">
                         <div class="row">
                           <div class="my-input-group col-12">
-                            <i class="fas fa-graduation-cap"></i><label class="mb-4">Cursos e treinamentos</label>
-                            <div class="form-check check-atestados">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck55">
-                              <label class="form-check-label" for="exampleCheck55">Sempre exibir informações sobre meus cursos</label>
-                            </div>
                             <div class="row row-cursos">
                               <div class="cursos d-none">
                                 <div class="col-12 col-md-5 curso-container">
+                                  
                                   <div class="row">
                                     <div class="col-12 col-md-8">
                                       <label for="">Instituição</label>
@@ -484,15 +499,10 @@
                       </div>
                     </div>
                     <div class="divider">
-                      <p class="divider--title">Clientes e depoimentos<i class="fas fa-chevron-down"></i></p>
+                      <p class="divider--title"><img style="width: 25px; margin-right: 9px;" src="./assets/client-red.png">Clientes e depoimentos<i class="fas fa-chevron-down"></i></p>
                       <div class="divider--content">
                         <div class="row">
                           <div class="my-input-group col-12">
-                            <img class="diploma" src="./assets/client.png"></i><label class="mb-4">Clientes e depoimentos</label>
-                            <div class="form-check check-atestados">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Sempre exibir informações sobre meus clientes atendidos</label>
-                            </div>
                             <div class="row row-clientes">
                               <div class="clientes d-none">
                                 <div class="col-12 col-md-5 curso-container">
@@ -514,6 +524,18 @@
                                       <input type="text" class="phone" placeholder="Digite o telefone do contato...">
                                     </div>
                                   </div>
+                                  <div class="form-check check-privacidade">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      Exibir sempre
+                                    </label>
+                                  </div>
+                                  <div class="form-check check-privacidade mb-3">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      Exibir apenas para quem eu enviar propostas
+                                    </label>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -527,51 +549,33 @@
                       </div>
                     </div>
                     <div class="divider">
-                      <p class="divider--title">Galeria<i class="fas fa-chevron-down"></i></p>
+                      <p class="divider--title"><i class="fas fa-film divider--icon"></i>Galeria<i class="fas fa-chevron-down"></i></p>
                       <div class="divider--content">
                         <div class="row">
                           <div class="my-input-group col-12">
-                            <i class="fas fa-film"></i><label class="mb-4" for="outra coisa">Galeria</label>
-                            <div class="form-check check-atestados">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Sempre exibir imagens e vídeos da minha empresa</label>
-                            </div>
                             <div class="mt-4 row">
                               <div class="col-12">
-                                <label for="exampleFormControlFile1">Upload de fotos e vídeos</label>
-                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                <div class="row">
+                                  <div class="col-12 col-md-6">
+                                    <label for="exampleFormControlFile1">Upload de fotos e vídeos</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                                    <label for=""> </label>
+                                    <input style="height: 50px;" placeholder="Legenda..." type="text">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-1 col-6 button-column-left">
+                                    <button type="button" class="btn btn-success mt-0 mb-5">Salvar</button>
+                                  </div>
+                                </div>
                                 <label for="comments">Apresentação da empresa:</label>
                                 <textarea rows="4" cols="50" wrap="physical" name="comments"></textarea>
-                                <label for="comments">Comentários de nossos clientes:</label>
-                                <textarea rows="4" cols="50" wrap="physical" name="comments"></textarea>
+                                
                               </div>
                             </div>
                             <div class="row row-obras">
-                              <div class="obras d-none">
-                                <div class="col-12 col-md-5 curso-container">
-                                  <div class="row">
-                                    <div class="col-12 col-md-8">
-                                      <label for="">Nome da obra</label>
-                                      <input class="required" type="text" placeholder="Digite o nome da instituição...">
-                                    </div>
-                                    <div class="col-12 col-md-4 expiration-column">
-                                      <label for="">Data da realização</label>
-                                      <input class="mb-0 datepicker date" placeholder="Escolha uma data..." type="text" required>
-                                    </div>
-                                  </div>
-                                  <label for="description">Descrição:</label>
-                                  <textarea rows="4" cols="50" wrap="physical" name="description"></textarea>
-                                  <div class="form-group">
-                                    <label for="exampleFormControlFile1">Upload da imagems e vídeos</label>
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row row-buttons">
-                              <div class="col-md-3 col-12 button-column-left">
-                                <button type="button" class="btn btn-primary button-obras">Adicionar serviço realizado</button>
-                              </div>
                             </div>
                           </div>
                         </div>

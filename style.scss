@@ -45,8 +45,8 @@ body {
 
 .divider {
   position: relative;
-  cursor: pointer;
   &--title {
+    cursor: pointer;
     font-size: 18px;
     color: #DB5461;
     width: 100%;
@@ -69,6 +69,13 @@ body {
   }
 }
 
+.check-privacidade {
+  label {
+    color: lightslategray !important;
+
+  }
+}
+
 .active {
   .fa-chevron-down {
     transform: rotate(180deg);
@@ -81,7 +88,7 @@ body {
 .profissional--button {
   height: 38px;
   font-size: 25px;
-  line-height: 0;
+  line-height: 0 !important;
   margin-left: 15px;
   width: auto;
 
@@ -123,7 +130,7 @@ body {
 }
 .btn {
   white-space: normal;
-  line-height: 0;
+  line-height: normal;
 }
 #exampleFormControlFile1 {
   overflow: hidden;

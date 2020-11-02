@@ -103,7 +103,7 @@ $(document).ready(function(){
   
   // Adicionar cursos / atestados / clientes
   $('.button-certificacao').on('click', () => {
-    $('.row-atestados').append($('.certificacao').html());
+    $('.row-certificacoes').append($('.certificacao').html());
   });
 
   $('.button-atestado').on('click', () => {
