@@ -202,7 +202,17 @@ $(document).ready(function(){
             showMonthAfterYear: false,
             yearSuffix: ''};
     $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
-});
+  });
+
+  // Botão salvar
+  $('.button-save').on('click', () => {
+    $('.upload-subtitle').val('');
+    $('.upload-file').val('')
+    $('.success-message').removeClass('d-none')
+    setTimeout(() => {
+      $('.success-message').addClass('d-none')
+    }, 2000)
+  })
 
 
   // Form tabs

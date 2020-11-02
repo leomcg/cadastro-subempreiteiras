@@ -87,13 +87,13 @@
                             <input type="text" id="cnpj" placeholder="Digite o CNPJ..." required>
                             <p class="error-message">Verifique o campo</p>
                           </div>
-                        </div>
-                        <div class="row">
                           <div class="my-input-group col-12 col-md-4">
                             <i class="fas fa-building"></i><label class="required">Nome da empresa</label>
                             <input type="text" placeholder="Digite o nome da sua empresa..." required>
                             <p class="error-message">Verifique o campo</p>
                           </div>
+                        </div>
+                        <div class="row">
                           <div class="my-input-group col-12 col-md-4">
                             <i class="fas fa-phone-alt"></i><label>Telefone</label>
                             <input type="text" class="phone" placeholder="Digite o telefone com o DDD...">
@@ -103,6 +103,10 @@
                             <img src="./assets/website.png"></i><label>Site</label>
                             <input type="text" placeholder="Digite o endereço de seu site..">
                             <p class="error-message">Verifique o campo</p>
+                          </div>
+                          <div class="my-input-group col-12 col-md-4">
+                            <i class="fas fa-upload"></i><label for="exampleFormControlFile1">Upload do logotipo</label>
+                            <input style="padding: 7px" class="upload-file" type="file" class="form-control-file" id="exampleFormControlFile1">
                           </div>
                         </div>
                         <div class="row">
@@ -558,16 +562,19 @@
                                 <div class="row">
                                   <div class="col-12 col-md-6">
                                     <label for="exampleFormControlFile1">Upload de fotos e vídeos</label>
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                    <input class="upload-file" type="file" class="form-control-file" id="exampleFormControlFile1">
                                   </div>
                                   <div class="col-12 col-md-6">
-                                    <label class="d-sm-none"> </label>
-                                    <input style="height: 50px;" placeholder="Legenda..." type="text">
+                                    <label class="display-none-mobile"> </label>
+                                    <input class="upload-subtitle" style="height: 50px;" placeholder="Legenda..." type="text">
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="col-md-1 col-6 button-column-left">
-                                    <button type="button" class="btn btn-success mt-0 mb-5">Salvar</button>
+                                    <button type="button" class="button-save btn btn-success mt-0 mb-5">Salvar</button>
+                                  </div>
+                                  <div>
+                                    <p class="success-message d-none">Salvo com sucesso!</p>
                                   </div>
                                 </div>
                                 <label for="comments">Apresentação da empresa:</label>
