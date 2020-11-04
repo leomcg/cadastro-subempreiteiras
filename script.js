@@ -1,17 +1,11 @@
 $(document).ready(function(){
   $('#rangeInput').prop('disabled', true);
-  
-  
   $('#rangeInput').val(0);
   
   //Date picker
   $('body').on('focus',".datepicker", function(){
     $(this).datepicker();
   })
-  
-  //    $( function() {
-  //   $( ".datepicker" ).datepicker();
-  // } );
   
   //masks
   $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
@@ -59,6 +53,8 @@ $(document).ready(function(){
       $('#rangeText').text(rangeValues[$(this).val()]);
     });
   });
+
+  // Adicionar profissional
   
   $('.profissional--button.btn-primary').on('click', (e) => {
     e.stopPropagation();
@@ -215,14 +211,14 @@ $(document).ready(function(){
     });
     
     // Botão salvar
-    $('.button-save').on('click', () => {
+    $('body').on('click', '.button-save', () => {
       $('.upload-subtitle').val('');
       $('.upload-file').val('')
       $('.success-message').removeClass('d-none')
       setTimeout(() => {
         $('.success-message').addClass('d-none')
       }, 2000)
-    })
+    });
     
     
     // Form tabs
