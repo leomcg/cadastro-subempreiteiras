@@ -2,4 +2,4 @@
 Freelancing project.
 Copyright: leomcg
 # Link:
-https://leomcg.github.io/contractors/
+https://leomcg.github.io/cadastro-subempreiteiras/
